@@ -1,8 +1,9 @@
 import base64
-from charm.toolbox.pairinggroup import PairingGroup, GT
+
+from Crypto.Cipher import AES
 from Cryptodome.Cipher import AES
 from Cryptodome.Random import get_random_bytes
-from Crypto.Cipher import AES
+from charm.toolbox.pairinggroup import PairingGroup
 
 
 def encrypt_file(file_path, key):
@@ -26,6 +27,7 @@ def encrypt_file(file_path, key):
 
 
 def decrypt_file(file_path, key):
+    print(file_path)
     # start_time = datetime.datetime.now()
     # Read the nonce, ciphertext, and tag from the encrypted file
     with open(file_path, 'rb') as file:
@@ -81,4 +83,3 @@ def grp_to_str(element):
     g_bytes = group.serialize(element)
 
     return g_bytes[:32]
-
