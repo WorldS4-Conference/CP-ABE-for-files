@@ -9,9 +9,9 @@ encoded_string_32 = encoded_string[:32].decode('utf-8')
 print("encoded_string_32 = ", encoded_string_32)
 
 
-# Convert the 32-character string back to the original byte string using base64 decoding
-decoded_string = base64.b64decode(encoded_string_32 + '==' + encoded_string[32:].decode('utf-8'))
-print("decoded_string = ", decoded_string)
-
-print(original_string == decoded_string)
+# # Convert the 32-character string back to the original byte string using base64 decoding
+# decoded_string = base64.b64decode(encoded_string_32 + '==' + encoded_string[32:].decode('utf-8'))
+# print("decoded_string = ", decoded_string)
+#
+# print(original_string == decoded_string)
 
